@@ -1,0 +1,15 @@
+.square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #C34600;
+    background-color: #C34600;
+    transform: rotate(0deg);
+    animation: animae 4s linear infinite;
+}
+@keyframes animae {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(18deg); }
+    50% { transform: rotate(36deg); }
+    75% { transform: rotate(52deg); }
+    100% { transform: rotate(90deg); }
+}

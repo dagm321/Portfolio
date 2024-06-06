@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.header {
+    height: 15vh;
+    background-color: #070707;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+.logo h2 {
+    font-size: 24px;
+    position: relative;
+}
+.logo h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+    padding: 20px;
+    width: 60px;
+    animation: logo_animation 10s linear infinite;
+}
+@keyframes logo_animation {
+    0% { width: 60px; }
+    50% { width: 10px; }
+    100% { width: 60px; }
+}
