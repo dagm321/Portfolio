@@ -1,13 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import About from './pages/About';
 
 function App() {
   return (
       <>
-        <Home/>
+        <About/>
       </>
   );
 }
