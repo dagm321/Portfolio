@@ -1,0 +1,12 @@
+.projects-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
+}
+.projects-line .projects_line {
+    width: 50%;
+    height: 8px;
+    background-color: #C34600;
+}

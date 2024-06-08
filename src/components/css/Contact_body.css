@@ -126,7 +126,7 @@
     justify-content: space-around;
     height: 50px;
 }
-svg {
+.contact-svg .svg a svg {
     width: 30px;
 }
 .contact-title {

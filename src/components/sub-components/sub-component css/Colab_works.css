@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.colab-content1 {
+    width: 551px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.colab-image {
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.colab-title {
+    width: 500px;
+    margin-top: 10px;
+}
+.colab-title p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.colab-image img {
+    width: 500px;
+    height: 300px;
+}
