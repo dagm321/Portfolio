@@ -2,20 +2,24 @@ import React from "react";
 import './css/Header.css';
 
 function Header({props}) {
+    
     let project_active = '';
     let skills_active = '';
     let about_active = '';
-    let contact_acitve = '';
+    let contact_active = '';
 
-    if (props == 'projects') {
-        project_active = 'active';
-    } else if (props == 'skills') {
-        skills_active = 'active';
-    } else if (props == 'about') {
-        about_active = 'active';
-    } else if (props == 'contact') {
-        contact_acitve = 'active';
-    }
+    // if (props = 'projects') {
+    //     project_active = 'active';
+    //     skills_active = '';
+    //     about_active = '';
+    //     contact_active = '';
+    // }  if (props = 'skills') {
+    //     skills_active = 'active';
+    // }  if (props = 'about') {
+    //     about_active = 'active';
+    // }  if (props = 'contact') {
+    //     contact_active = 'active';
+    // }
 
     return(
         <>
@@ -27,7 +31,7 @@ function Header({props}) {
                     <a className={project_active} href="/">Projects</a>
                     <a className={skills_active} href="/">Skills</a>
                     <a className={about_active} href="/">About</a>
-                    <a className={contact_acitve} href="/">Contact</a>
+                    <a className={contact_active} href="/">Contact</a>
                 </div>
             </div>
         </>

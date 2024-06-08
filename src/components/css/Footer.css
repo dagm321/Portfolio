@@ -23,3 +23,11 @@
     font-size: 13px;
     justify-content: space-evenly;
 }
+.contents p svg{
+    width: 10px;
+    margin-left: 10px;
+}
+.contents p {
+    display: flex;
+    
+}
