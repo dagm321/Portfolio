@@ -1,0 +1,32 @@
+.skills_item {
+    width: 50%;
+    height: 45px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills_item .skill_name p {
+    font-size: 15px;
+}
+.skills_item p svg {
+    width: 12px;
+}
+.skills_item p {
+    font-size: 13px;
+}
+.rating .rate_box {
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+}
+.rating {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.skill_name {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
