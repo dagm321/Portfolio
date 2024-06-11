@@ -16,10 +16,17 @@
     display: flex;
     justify-content: space-around;
 }
+.menu a svg {
+    width: 20px;
+}
 .menu a {
     color: white;
     text-decoration: none;
     font-size: 12px;
+}
+.menu a:hover {
+    color: #C34600;
+    transition: 0.4s ease;
 }
 .menu .active {
     border-top: 1px solid white;

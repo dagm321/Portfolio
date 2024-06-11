@@ -1,7 +1,31 @@
 import React from "react";
 import './css/Header.css';
+import { useNavigate } from "react-router-dom";
 
 function Header({props}) {
+
+    const navigate = useNavigate();
+
+    const gotohome = (e) => {
+        e.preventDefault();
+        navigate('/');
+    }
+    const gotoskills = (e) => {
+        e.preventDefault();
+        navigate('/skills');
+    }
+    const gotoprojects = (e) => {
+        e.preventDefault();
+        navigate('/projects');
+    }
+    const gotocontact = (e) => {
+        e.preventDefault();
+        navigate('/contact');
+    }
+    const gotoabout = (e) => {
+        e.preventDefault();
+        navigate('/about');
+    }
     
     let project_active = '';
     let skills_active = '';
@@ -28,10 +52,11 @@ function Header({props}) {
                     <h2>Dagos</h2>
                 </div>
                 <div className="menu">
-                    <a className={project_active} href="/">Projects</a>
-                    <a className={skills_active} href="/">Skills</a>
-                    <a className={about_active} href="/">About</a>
-                    <a className={contact_active} href="/">Contact</a>
+                    <a href="/" onClick={gotohome}>Home</a>
+                    <a className={project_active} href="/projects" onClick={gotoprojects}>Projects</a>
+                    <a className={skills_active} href="/skills" onClick={gotoskills}>Skills</a>
+                    <a className={about_active} href="/about" onClick={gotoabout}>About</a>
+                    <a className={contact_active} href="/contact" onClick={gotocontact}>Contact</a>
                 </div>
             </div>
         </>

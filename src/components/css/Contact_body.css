@@ -126,8 +126,12 @@
     justify-content: space-around;
     height: 50px;
 }
+.svg a svg:hover {
+    transform: translateY(-5px);
+    transition: .4s ease;
+}
 .contact-svg .svg a svg {
-    width: 30px;
+    width: 23px;
 }
 .contact-title {
     display: flex;

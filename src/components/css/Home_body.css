@@ -46,9 +46,9 @@
 .col-1 .item2 h2 {
     border-left: 4px solid #C34600;
     padding: 8px;
-    animation: animation 3s linear ;
+    animation: animation1 3s linear ;
 }
-@keyframes animation {
+@keyframes animation1 {
     0% {
         transform: translateY(-100px);
     }
