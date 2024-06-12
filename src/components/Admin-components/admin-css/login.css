@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.login-body {
+    width: 100%;
+    height: 70vh;
+    background-color: #070707;
+    display: flex;
+    justify-content: space-around;
+}
+.login-box1 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.login-box2 {
+    width: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box3 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box1 img {
+    width: 350px;
+}
+.login-line {
+    width: 2px;
+    height: 70%;
+    background-color: white;
+    border-radius: 50px;
+}
+.login-input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-input form input {
+    width: 300px;
+    height: 27px;
+    margin: 6px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.login-input form input::placeholder {
+    text-indent: 15px;
+    font-size: 12px;
+}
+.login-input form input:focus {
+    box-shadow: 3px 3px 10px #C34600;
+    transition: 0.1s ease;
+}
+.login-input form input[type="text"] {
+    text-indent: 15px;
+}
+.login-input form input[type="password"] {
+    text-indent: 15px;
+}
+.login-input form button {
+    width: 304px;
+    height: 27px;
+    margin: 6px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #C34600;
+    color: white;
+}
+.login-input form button:hover {
+    background-color: #ff5e00;
+    transition: .7s ease;
+}
+.login-input h1 {
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    position: relative;
+    padding: 5px;
+}
+.login-input h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 5px solid #C34600;
+    width: 50px;
+}

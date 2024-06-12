@@ -84,6 +84,10 @@
     background-color: #070707;
     box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.4);
 }
+.contact-main input[type="text"] {
+    color: white;
+    text-indent: 20px;
+}
 .contact-main input::placeholder {
     color: white;
     font-size: 11px;
