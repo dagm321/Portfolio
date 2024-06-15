@@ -5,10 +5,12 @@ import Add_Skills from "./Add_skills";
 import Add_about from "./Add_about";
 import Add_colab from "./Add_collab";
 import { useState } from "react";
+import Message_box from "../sub-components/Message_box";
 
 export default function Add_items() {
     const [page, setpage] = useState(<Add_project/>);
     const [active, setactive] = useState('add_project');
+    const [messagebox, setmessagebox] = useState(<Message_box/>);
     function set_skills() {
         setpage(<Add_Skills/>);
         setactive('add_skills');
@@ -25,12 +27,18 @@ export default function Add_items() {
         setpage(<Add_project/>);
         setactive('add_project');
     }
+    function set_messagebox () {
+        setmessagebox(<Message_box/>);
+    }
+    function close_messagebox() {
+        setmessagebox('');
+    }
 
     
     return(
         <>
 
-
+            
             <div className="add_item-body">
                 <div className="add-item-main-box">
                     <div className="item_menu">
@@ -42,6 +50,7 @@ export default function Add_items() {
                     {page}
                 </div>
             </div>
+            {/* {messagebox} */}
 
         </>
     );
