@@ -1,0 +1,14 @@
+.social_media {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social_media p {
+    font-size: 13px;
+}
+.social_media .socialMedia_title {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+}

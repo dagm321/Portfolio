@@ -4,6 +4,7 @@ import Add_project from "./Add_project";
 import Add_Skills from "./Add_skills";
 import Add_about from "./Add_about";
 import Add_colab from "./Add_collab";
+import Update_socialMedia from "./Update_socialMedia";
 import { useState } from "react";
 import Message_box from "../sub-components/Message_box";
 
@@ -27,6 +28,10 @@ export default function Add_items() {
         setpage(<Add_project/>);
         setactive('add_project');
     }
+    function set_socialMedia() {
+        setpage(<Update_socialMedia/>);
+        setactive('update_socialMedia');
+    }
     function set_messagebox () {
         setmessagebox(<Message_box/>);
     }
@@ -46,6 +51,7 @@ export default function Add_items() {
                         <button className={active === 'add_colab' ? 'menu-active' : ''} onClick={set_colab}>Add Collaboration Works</button>
                         <button className={active === 'add_skills' ? 'menu-active' : ''} onClick={set_skills}>Add Skills</button>
                         <button className={active === 'add_about' ? 'menu-active' : ''} onClick={set_about}>Add About me paragraph</button>
+                        <button className={active === 'update_socialMedia' ? 'menu-active' : ''} onClick={set_socialMedia}>Social Media Links</button>
                     </div>
                     {page}
                 </div>
