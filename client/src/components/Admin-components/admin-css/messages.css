@@ -74,22 +74,22 @@
     font-size: 14px;
 }
 .message-sender-date small {
-    font-size: 10px;
+    font-size: 9px;
 }
 .message-email {
     width: 100%;
     height: 10%;
-    font-size: 13px;
+    font-size: 12px;
 }
 .message-subject {
     width: 100%;
     height: 10%;
-    font-size: 15px;
+    font-size: 13px;
 }
 .message-content {
     width: 100%;
     height: 40%;
-    font-size: 13px;
+    font-size: 11px;
 }
 .message-line {
     display: flex;

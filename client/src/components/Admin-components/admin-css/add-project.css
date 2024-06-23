@@ -38,6 +38,20 @@
 .project_content form input[type="text"] {
     text-indent: 25px;
 }
+.textarea {
+    width: 100%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+.textarea:focus {
+    box-shadow: 3px 3px 10px #C34600;
+    transition: 0.2s ease;
+}
+.textarea[type="text"] {
+    padding: 10px;
+}
 .project_content form button {
     width: 101%;
     height: 30px;

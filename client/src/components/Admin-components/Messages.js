@@ -1,8 +1,18 @@
 import React from "react";
 import './admin-css/messages.css';
 import Message_content from "./Message_content";
+import {useState, useEffect} from "react";
+import axios from "axios";
 
 export default function Messages() {
+    const [contents, setContents] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3001/getMessages')
+        .then (result => {
+            console.log(result)
+            setContents(result.data)
+        })
+    }, [])
     return(
         <>
 
@@ -12,34 +22,18 @@ export default function Messages() {
                         <h1>Messages</h1>
                     </div>
                     <div className="messages">
-                        <Message_content
-                            sender = {"Dr Tesfaye Gabiso"}
-                            date ={"June 5, 2024"}
-                            email={"zerubabelfilimon54@gmail.com"}
-                            subject={"Work Interview"}
-                            content={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                        />
-                        <Message_content
-                            sender = {"Dr Tesfaye Gabiso"}
-                            date ={"June 5, 2024"}
-                            email={"zerubabelfilimon54@gmail.com"}
-                            subject={"Work Interview"}
-                            content={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                        />
-                        <Message_content
-                            sender = {"Dr Tesfaye Gabiso"}
-                            date ={"June 5, 2024"}
-                            email={"zerubabelfilimon54@gmail.com"}
-                            subject={"Work Interview"}
-                            content={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                        />
-                        <Message_content
-                            sender = {"Dr Tesfaye Gabiso"}
-                            date ={"June 5, 2024"}
-                            email={"zerubabelfilimon54@gmail.com"}
-                            subject={"Work Interview"}
-                            content={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                        />
+                        {
+                            contents.map((content) => {
+                                return <Message_content
+                                    sender = {content.name}
+                                    date ={content.date}
+                                    email={content.email}
+                                    subject={content.subject}
+                                    content={content.content}
+                                    __id = {content._id}
+                                />
+                            })
+                        }
                     </div>
                 </div>
             </div>

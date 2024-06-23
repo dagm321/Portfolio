@@ -1,8 +1,21 @@
 import React from "react";
 import './css/Contact_body.css';
 import Square from "./sub-components/Square";
+import {useState} from 'react';
+import axios from 'axios';
 
 function Contact_body() {
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [subject, setSubject] = useState();
+    const [content, setContent] = useState();
+
+    const submit = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:3001/createMessage', {name, email, subject, content})
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
+    }
     return(
         <>
             <div className="contact-body">
@@ -12,11 +25,17 @@ function Contact_body() {
                     </div>
                     <div className="contact-main">
                         <div className="contact-inputs">
-                            <input type="text" placeholder="Name"/>
-                            <input type="text" placeholder="Email"/>
-                            <input type="text" placeholder="Subject"/>
-                            <input placeholder="Message" style={{height: '100px'}} type="text"/>
-                            <button>Send</button>
+                            <form onSubmit={submit}>
+                                <input type="text" placeholder="Name"
+                                onChange={(e) => {setName(e.target.value)}}/>
+                                <input type="text" placeholder="Email"
+                                onChange={(e) => {setEmail(e.target.value)}}/>
+                                <input type="text" placeholder="Subject"
+                                onChange={(e) => {setSubject(e.target.value)}}/>
+                                <textarea className="textarea_message" placeholder="Message" type="text"
+                                onChange={(e) => {setContent(e.target.value)}}/>
+                                <button>Send</button>
+                            </form>
                         </div>
                     </div>
                 </div>

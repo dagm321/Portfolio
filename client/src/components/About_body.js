@@ -3,6 +3,8 @@ import Square from "./sub-components/Square";
 import './css/About_body.css';
 import me from '../assets/images/me.png';
 import { useNavigate } from "react-router-dom";
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 function About_body() {
     const navigate = useNavigate();
@@ -10,6 +12,15 @@ function About_body() {
         e.preventDefault();
         navigate('/contact');
     }
+    const [description, setDescription] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3001/getAbout')
+        .then(result => {
+            console.log(result)
+            setDescription(result.data)
+        })
+        .catch(err => console.log(err))
+    })
     return(
         <>
             <div className="about-body">
@@ -31,11 +42,13 @@ function About_body() {
                     <div className="about-box2">
                         <div className="about-paragraph">
                             <p>
-                            My name is Dagim Teshome, a passionate software developer based in Addis Ababa, Ethiopia.
-                            Currently, I am a third-year Software Engineering student at Bits College. I specialize in web
-                            development and have a strong interest in creating dynamic and user-friendly web applications.
-                            Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both
-                            music and software development.
+                            {
+                                description.map((text) => {
+                                    return <p>
+                                        {text.description}
+                                    </p>
+                                })
+                            }
                             <br/><br/>
                             I am available for freelance. All you have to do is contact me here:
                             </p>

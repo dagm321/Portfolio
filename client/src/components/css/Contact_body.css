@@ -84,6 +84,25 @@
     background-color: #070707;
     box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.4);
 }
+.textarea_message {
+    width: 90%;
+    height: 10vh;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    background-color: #070707;
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.4); 
+}
+.textarea_message:focus {
+    background-color: #000000;
+}
+.textarea_message[type="text"] {
+    padding: 20px;
+    color: white;
+}
+.textarea_message::placeholder {
+    color: white;
+}
 .contact-main input[type="text"] {
     color: white;
     text-indent: 20px;

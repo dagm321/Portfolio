@@ -2,7 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const skills = require('./model/Skills')
-const about = require('./model/About')
+const aboutMe = require('./model/AboutMe')
+const Messages = require('./model/Messages')
+const port = 3001;
 
 const app = express()
 app.use(cors())
@@ -17,12 +19,40 @@ app.get("/getskills", (req, res) => {
     .catch(err => res.json(err))
 })
 
+app.get("/getMessages", (req, res) => {
+    Messages.find({})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+app.delete("/deleteMessage/:id", (req, res) => {    
+    const {id} = req.params;
+    Messages.findByIdAndDelete({_id: id})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+app.post("/createMessage", (req, res) => {
+    Messages.create(req.body)
+    .then(messages=> res.json(messages))
+    .catch(err => res.json(err))
+})
+
+app.post("/createAboutMe", (req, res) => {
+    aboutMe.create(req.body)
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+app.get("/getAbout", (req, res) => {
+    aboutMe.find({})
+    .then(result => res.json(result))
+    .catch(err=> res.json(err))
+})
+
 app.post("/createskill", (req, res) => {
     skills.create(req.body)
     .then(user => res.json(user))
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log("server is running on 3001")
 })

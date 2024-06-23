@@ -10,7 +10,7 @@ export default function Add_project() {
                     <form>
                         <input type="text" placeholder="Title" />
                         <input type="text" placeholder="Bio" />
-                        <input type="text" style={{height: '70px', borderRadius: '10px'}} placeholder="Description" />
+                        <textarea className="textarea" type="text" style={{height: '70px', borderRadius: '10px', width: "95%", marginLeft: "5px", marginTop: "5px"}} placeholder="Description" />
                         <input type="text" placeholder="Upload Image" />
                         <input type="text" placeholder="Github Link" />
                         <button>Submit</button>
