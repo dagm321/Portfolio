@@ -33,18 +33,14 @@ export default function Update_socialMedia() {
             <div className="add-project-body">
                 <div className="project_content">
                     <h2>Social Media Links</h2>
-                        {
-                            data.map((each) => {
-                                return <form onSubmit={submit}>
-                                        <div className='social_media'>  <div className='socialMedia_title'><p>Linked in</p></div> <input onChange={(e) => {setlinkedin(e.target.value)}} style={{width: "80%"}} value={each.linkedin} type="text" placeholder="Linked In" /></div>
-                                        <div className='social_media'>  <div className='socialMedia_title'><p>Instagram</p></div> <input onChange={(e) => {setinstagram(e.target.value)}} style={{width: "80%"}} value={each.instagram} type="text" placeholder="Instagram" /></div>
-                                        <div className='social_media'>  <div className='socialMedia_title'> <p>Telegram</p></div> <input onChange={(e) => {settelegram(e.target.value)}} style={{width: "80%"}} value={each.telegram} type="text" placeholder="Telegram" /></div>
-                                        <div className='social_media'>  <div className='socialMedia_title'><p>Github</p> </div><input onChange={(e) => {setgithub(e.target.value)}} style={{width: "80%"}} value={each.github} type="text" placeholder="Github" /></div>
-                                        <div className='social_media'>  <div className='socialMedia_title'><p>X</p></div> <input onChange={(e) => {setx(e.target.value)}} style={{width: "80%"}} type="text" value={each.x} placeholder="X" /></div>
-                                        <button>Update</button>
-                                    </form>
-                            })
-                        }
+                    <form onSubmit={submit}>
+                        <div className='social_media'>  <div className='socialMedia_title'><p>Linked in</p></div> <input onChange={(e) => {setlinkedin(e.target.value)}} style={{width: "80%"}}  type="text" placeholder="Linked In" /></div>
+                        <div className='social_media'>  <div className='socialMedia_title'><p>Instagram</p></div> <input onChange={(e) => {setinstagram(e.target.value)}} style={{width: "80%"}}  type="text" placeholder="Instagram" /></div>
+                        <div className='social_media'>  <div className='socialMedia_title'> <p>Telegram</p></div> <input onChange={(e) => {settelegram(e.target.value)}} style={{width: "80%"}} type="text" placeholder="Telegram" /></div>
+                        <div className='social_media'>  <div className='socialMedia_title'><p>Github</p> </div><input onChange={(e) => {setgithub(e.target.value)}} style={{width: "80%"}} type="text" placeholder="Github" /></div>
+                        <div className='social_media'>  <div className='socialMedia_title'><p>X</p></div> <input onChange={(e) => {setx(e.target.value)}} style={{width: "80%"}} type="text" placeholder="X" /></div>
+                        <button>Update</button>
+                    </form>
                 </div>
             </div>
         </>

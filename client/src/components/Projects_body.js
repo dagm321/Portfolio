@@ -6,11 +6,34 @@ import bookingapp from '../assets/images/bookingapp.jpg';
 import cityaddis from '../assets/images/cityaddis.jpg';
 import Projects_header from "./sub-components/Projects_header";
 import Projects_colab from "./sub-components/Projects_colab";
+import axios from "axios";
+import {useState, useEffect} from "react";
 
 function Projects_body() {
+    const[projects, setProjects] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3001/getProjects')
+        .then(result => {
+            console.log(result)
+            setProjects(result.data)
+        })
+        .catch(err => console.log(err))
+    })
     return(
         <>
             <Projects_header/>
+            {/* {
+                projects.map((project) => {
+                    return <Projects_content
+                        project_title={project.title}
+                        project_bio={project.bio}
+                        project_paragraph={project.descripiton}
+                        project_link={project.github_link}
+                        project_image={project.image}
+                        flex_direction={""}
+                    />
+                })
+            } */}
             <Projects_content
                 project_image={aio}
                 project_title={"AIO"}

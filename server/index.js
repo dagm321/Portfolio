@@ -5,6 +5,8 @@ const skills = require('./model/Skills')
 const aboutMe = require('./model/AboutMe')
 const Messages = require('./model/Messages')
 const social_media = require('./model/SocialMedia')
+const project = require('./model/Projects')
+const colab = require('./model/Colab_works')
 const port = 3001;
 
 const app = express()
@@ -59,7 +61,29 @@ app.get("/getAbout", (req, res) => {
     .then(result => res.json(result))
     .catch(err=> res.json(err))
 })
+app.post("/createProject", (req, res) => {
+    project.create(req.body)
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
 
+app.get("/getProjects", (req, res) => {
+    project.find({})
+    .then(projects => res.json(projects))
+    .catch(err => res.json(err))
+})
+
+
+app.post("/createColabWorks", (req, res) => {
+    colab.create(req.body)
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+app.get("/getColabWorks", (req, res) => {
+    colab.find({})
+    .then(cworks => res.json(cworks))
+    .catch(err => res.json(err))
+})
 app.post("/createskill", (req, res) => {
     skills.create(req.body)
     .then(user => res.json(user))

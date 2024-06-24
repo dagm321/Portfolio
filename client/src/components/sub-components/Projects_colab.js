@@ -4,7 +4,18 @@ import Square from "./Square";
 import Colab_works from "./Colab_works";
 import login from '../../assets/images/login.jpg';
 import eat from '../../assets/images/eat.jpg';
+import axios from "axios";
+import {useState, useEffect} from "react";
 function Projects_colab() {
+    const[data, setData] = useState([]);
+    useEffect(() => {
+        axios.get('http://localhost:3001/getColabWorks')
+        .then(result => {
+            console.log(result)
+            setData(result.data)
+        })
+        .catch(err => console.log(err))
+    })
     return(
         <>
             <div className="colab-body">
@@ -19,6 +30,15 @@ function Projects_colab() {
                 </div>
                 <div className="colab-box2">
                     {/* Insert Project collaborations here */}
+                    {/* {
+                        data.map((eachdata) => {
+                            return <Colab_works
+                                colab_image={eachdata.colab_image}
+                                colab_title={eachdata.title}
+                                colab_paragraph={eachdata.description}
+                            />
+                        })
+                    } */}
                     <Colab_works
                         colab_image={eat}
                         colab_title={"School Management System"}
