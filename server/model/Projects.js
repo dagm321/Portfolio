@@ -5,7 +5,10 @@ const ProjectSchema = new mongoose.Schema({
     bio : String,
     descripition : String,
     github_link : String,
-    image : String
+    image : {
+        data : Buffer,
+        contentType : String
+    }
 })
 
 const ProjectModel = mongoose.model("projects", ProjectSchema)

@@ -8,6 +8,10 @@ const social_media = require('./model/SocialMedia')
 const project = require('./model/Projects')
 const colab = require('./model/Colab_works')
 const port = 3001;
+// image handling imports
+const multer = require('multer')
+const storage = multer.memoryStorage();
+const upload = multer({storage})
 
 const app = express()
 app.use(cors())
@@ -15,6 +19,25 @@ app.use(express.json())
 
 mongoose.connect('mongodb://0.0.0.0:27017/Portfolio')
 
+//image upload 
+app.post("/createProject", upload.single('image'), async (req, res) => {
+    const new_Project = new project({
+        title : req.body.title,
+        bio : req.body.bio,
+        descripition : req.body.descripition,
+        github_link : req.body.github_link,
+        image : {
+            data : req.file.buffer,
+            contentType : req.file.mimetype,
+        },
+    });
+    try {
+        const result = await new_Project.save();
+        res.status(201).json(result);
+    } catch (err) {
+        res.status(500).json({error: err.message})
+    }
+} )
 
 app.get("/getskills", (req, res) => {
     skills.find({})
@@ -61,11 +84,11 @@ app.get("/getAbout", (req, res) => {
     .then(result => res.json(result))
     .catch(err=> res.json(err))
 })
-app.post("/createProject", (req, res) => {
-    project.create(req.body)
-    .then(result => res.json(result))
-    .catch(err => res.json(err))
-})
+// app.post("/createProject", (req, res) => {
+//     project.create(req.body)
+//     .then(result => res.json(result))
+//     .catch(err => res.json(err))
+// })
 
 app.get("/getProjects", (req, res) => {
     project.find({})
@@ -74,14 +97,25 @@ app.get("/getProjects", (req, res) => {
 })
 
 
-app.post("/createColabWorks", (req, res) => {
-    colab.create(req.body)
-    .then(result => res.json(result))
-    .catch(err => res.json(err))
+app.post("/createColabWorks", upload.single('image') ,async (req, res) => {
+    const new_colab = new colab({
+        title : req.body.title,
+        description : req.body.descripition,
+        image : {
+            data : req.file.buffer,
+            contentType : req.file.mimetype
+        }
+    })
+    try {
+        const result = await new_colab.save();
+        res.status(201).json(result);
+    } catch(err) {
+        res.status(500).json({error : err.message})
+    }
 })
 app.get("/getColabWorks", (req, res) => {
     colab.find({})
-    .then(cworks => res.json(cworks))
+    .then(result => res.json(result))
     .catch(err => res.json(err))
 })
 app.post("/createskill", (req, res) => {
