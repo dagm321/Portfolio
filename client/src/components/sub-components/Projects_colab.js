@@ -5,9 +5,27 @@ import Colab_works from "./Colab_works";
 import login from '../../assets/images/login.jpg';
 import eat from '../../assets/images/eat.jpg';
 import axios from "axios";
+import { Buffer } from 'buffer';
 import {useState, useEffect} from "react";
 function Projects_colab() {
-
+    const[colabData, setColabData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('http://localhost:3001/getColabWorks');
+            setColabData(response.data);
+            console.log(colabData);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+        fetchData();
+    });
+    // this is a function that converts image buffer data to url 
+    function bufferToDataURL(bufferData, contentType) {
+        return `data:${contentType};base64,${Buffer.from(bufferData).toString('base64')}`;
+    }
+      
     return(
         <>
             <div className="colab-body">
@@ -22,16 +40,13 @@ function Projects_colab() {
                 </div>
                 <div className="colab-box2">
                     {/* Insert Project collaborations here */}
-                    <Colab_works
-                        colab_image={eat}
-                        colab_title={"School Management System"}
-                        colab_paragraph={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                    />
-                    <Colab_works
-                        colab_image={login}
-                        colab_title={"Hagere Games"}
-                        colab_paragraph={"Outside of coding, I enjoy playing lead guitar, combining  my technical and creative skills in both Outside of coding, I enjoy playing lead guitar, combining my technical and creative skills in both"}
-                    />
+                    {colabData.map((data) => (
+                        <Colab_works
+                            colab_image={bufferToDataURL(data.image.data, data.image.contentType)}
+                            colab_title={data.title}
+                            colab_paragraph={data.description}
+                        />
+                    ))}
                 </div>
                 <div className="colab-box3"></div>
             </div>

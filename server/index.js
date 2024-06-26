@@ -33,9 +33,9 @@ app.post("/createProject", upload.single('image'), async (req, res) => {
     });
     try {
         const result = await new_Project.save();
-        res.status(201).json(result);
+        res.json(result);
     } catch (err) {
-        res.status(500).json({error: err.message})
+        res.json({err})
     }
 } )
 
@@ -108,9 +108,9 @@ app.post("/createColabWorks", upload.single('image') ,async (req, res) => {
     })
     try {
         const result = await new_colab.save();
-        res.status(201).json(result);
+        res.json(result);
     } catch(err) {
-        res.status(500).json({error : err.message})
+        res.json({err})
     }
 })
 app.get("/getColabWorks", (req, res) => {

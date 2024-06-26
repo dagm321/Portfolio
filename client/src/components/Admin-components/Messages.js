@@ -12,7 +12,7 @@ export default function Messages() {
             console.log(result)
             setContents(result.data)
         })
-    }, [])
+    })
     return(
         <>
 

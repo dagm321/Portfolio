@@ -11,7 +11,7 @@ export default function Add_project() {
     const[image, setImage] = useState(null);
 
     const submit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const formdata = new FormData();
         formdata.append('title', title);
         formdata.append('bio', bio);
@@ -28,9 +28,6 @@ export default function Add_project() {
         } catch (err) {
             console.log(err);
         }
-        // await axios.post('http://localhost:3001/createProject', {title, bio, descripition, github_link, image})
-        // .then(result => console.log(result))
-        // .catch(err => console.log(err))
     }
     return(
         <>
