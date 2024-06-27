@@ -3,18 +3,38 @@ import './css/Contact_body.css';
 import Square from "./sub-components/Square";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import Popup from "./Admin-components/Popup";
 
 function Contact_body() {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [subject, setSubject] = useState();
     const [content, setContent] = useState();
+    const [popup, setPopup] = useState(null);
+    const[handlepop, sethandlepop] = useState(false); 
+    const close = () => {
+        sethandlepop(false);
+    }
 
     const submit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3001/createMessage', {name, email, subject, content})
-        .then(result => console.log(result))
-        .catch(err => console.log(err))
+        .then(result =>{ console.log(result)
+            setPopup(<Popup
+                status ={true}
+                message={"Succesfully Added to the server"}
+                closepopup={close}
+            />);
+            sethandlepop(true);
+        })
+        .catch(err => {console.log(err)
+            setPopup(<Popup
+                status ={false}
+                message={"Inserting Data Failed: " + err}
+                closepopup={close}
+            />);
+            sethandlepop(true);
+        })
     }
 
     const[linkedin, setlinkedin] = useState();
@@ -36,6 +56,7 @@ function Contact_body() {
     }, [])
     return(
         <>
+            {handlepop ? (popup) : null}
             <div className="contact-body">
                 <div className="contact-box1">
                     <div className="contact-titlebox">

@@ -2,7 +2,7 @@ import './admin-css/add-project.css';
 import './admin-css/update_socialMedia.css';
 import {useState, useEffect} from "react";
 import axios from "axios";
-
+import Popup from './Popup';
 export default function Update_socialMedia() {
     const [linkedin, setlinkedin] = useState();
     const [instagram, setinstagram] = useState();
@@ -10,6 +10,11 @@ export default function Update_socialMedia() {
     const [github, setgithub] = useState();
     const [x, setx] = useState();
     const [data, setData] = useState([]);
+    const [popup, setPopup] = useState(null);
+    const[handlepop, sethandlepop] = useState(false); 
+    const close = () => {
+        sethandlepop(false);
+    }
 
     // const id = '667791b395483bfc4c7ac7e1';
 
@@ -19,17 +24,32 @@ export default function Update_socialMedia() {
             console.log(result)
             setData(result.data)
         })
-        .catch(err => console.log(err))
+        .catch(err => {console.log(err)
+            setPopup(<Popup
+                status ={false}
+                message={"Inserting Data Failed: " + err}
+                closepopup={close}
+            />);
+            sethandlepop(true);
+        })
     }, [])
 
     const submit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3001/updateSocialMedia', {linkedin, instagram, telegram, github, x})
-        .then(result => console.log(result))
+        .then(result => {console.log(result)
+            setPopup(<Popup
+                status ={true}
+                message={"Succesfully Added to the server"}
+                closepopup={close}
+            />);
+            sethandlepop(true);
+        })
         .catch(err => console.log(err))
     }
     return(
         <>
+            {handlepop ? (popup) : null}
             <div className="add-project-body">
                 <div className="project_content">
                     <h2>Social Media Links</h2>

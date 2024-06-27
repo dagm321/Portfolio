@@ -1,11 +1,17 @@
 import React, {useState} from "react";
 import './admin-css/add-project.css';
 import axios from 'axios';
+import Popup from "./Popup";
 
 export default function Add_colab() {
     const [title, setTitle] = useState('');
     const [descripition, setDescription] = useState('');
     const[image, setImage] = useState(null);
+    const [popup, setPopup] = useState(null);
+    const[handlepop, sethandlepop] = useState(false); 
+    const close = () => {
+        sethandlepop(false);
+    }
     
     const submit = async (e) => {
         e.preventDefault();
@@ -19,8 +25,20 @@ export default function Add_colab() {
                     "Content-Type" : "multipart/form-data"
                 }
             })
+            setPopup(<Popup
+                status ={true}
+                message={"Succesfully Added to the server"}
+                closepopup={close}
+            />);
+            sethandlepop(true);
             console.log(result);
         } catch (err) {
+            setPopup(<Popup
+                status ={false}
+                message={"Inserting Data Failed: " + err}
+                closepopup={close}
+            />);
+            sethandlepop(true);
             console.log(err);
         }
         // axios.post('http://localhost:3001/createColabWorks', {title, descripition, image})
@@ -30,6 +48,7 @@ export default function Add_colab() {
 
     return(
         <>
+            {handlepop ? (popup) : null}
             <div className="add-project-body">
                 <div className="project_content">
                     <h2>Add Collaboration Works</h2>

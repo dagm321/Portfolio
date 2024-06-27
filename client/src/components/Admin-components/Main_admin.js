@@ -30,7 +30,7 @@ export default function Main_admin() {
     }
 
     return(
-        <>
+        <> 
             <div className="header">
                 <div className="logo">
                     <h2>Dagos</h2>

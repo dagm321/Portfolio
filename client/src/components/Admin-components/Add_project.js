@@ -1,7 +1,9 @@
 import React from "react";
 import './admin-css/add-project.css';
 import {useState} from "react";
+import Popup from "./Popup";
 import axios from "axios";
+import "./admin-css/popup.css";
 
 export default function Add_project() {
     const[title, setTitle] = useState('');
@@ -9,9 +11,13 @@ export default function Add_project() {
     const[descripition, setDescription] = useState('');
     const[github_link, setGithub_link] = useState('');
     const[image, setImage] = useState(null);
-
+    const [popup, setPopup] = useState(null);
+    const[handlepop, sethandlepop] = useState(false); 
+    const close = () => {
+        sethandlepop(false);
+    }
     const submit = async (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         const formdata = new FormData();
         formdata.append('title', title);
         formdata.append('bio', bio);
@@ -24,13 +30,27 @@ export default function Add_project() {
                     "Content-Type" : "multipart/form-data"
                 }
             })
+            setPopup(<Popup
+                status ={true}
+                message={"Succesfully Added to the server"}
+                closepopup={close}
+            />);
+            sethandlepop(true);
             console.log(result);
         } catch (err) {
+            setPopup(<Popup
+                status ={false}
+                message={"Inserting Data Failed: " + err}
+                closepopup={close}
+            />);
+            sethandlepop(true);
             console.log(err);
         }
     }
+
     return(
         <>
+            {handlepop ? (popup) : null}
             <div className="add-project-body">
                 <div className="project_content">
                     <h2>Add Project</h2>
