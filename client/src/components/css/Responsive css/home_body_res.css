@@ -22,3 +22,8 @@
         justify-content: center;
     }
  }
+ @media(max-width: 500px) {
+    .body .col-2 img {
+        height: 100px;
+    }
+ }

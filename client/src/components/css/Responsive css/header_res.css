@@ -20,3 +20,13 @@
     font-size: 10px;
   }
 }
+@media(max-width: 500px) {
+  .menu {
+    display: none;
+  }
+}
+@media(min-width: 500px) {
+  .menu-icon {
+      display: none;
+  }
+}
