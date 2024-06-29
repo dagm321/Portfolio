@@ -1,0 +1,30 @@
+@media(max-width: 1000px) {
+    .skills_item {
+        height: 35px;
+    }
+    .skills_item .skill_name p {
+        font-size: 10px;
+    }
+    .skills_item p svg {
+        width: 9px;
+    }
+    .rating .rate_box {
+        width: 10px;
+        height: 10px;
+    }
+}
+@media(max-width: 760px) {
+    .skills_item {
+        height: 30px;
+    }
+    .skills_item .skill_name p {
+        font-size: 8px;
+    }
+    .skills_item p svg {
+        width: 7px;
+    }
+    .rating .rate_box {
+        width: 8px;
+        height: 8px;
+    }
+}

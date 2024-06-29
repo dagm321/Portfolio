@@ -1,0 +1,48 @@
+@media(max-width: 1210px) {
+    .colab_content1 {
+        width: 400px;
+        height: 350px;
+    }
+    .colab-content1 .colab-image {
+        width: 400px;
+        height: 250px;
+    }
+    .colab-content1 .colab-image img {
+        width: 400px;
+        height: 250px;
+    }
+    .colab-content1 .colab-title {
+        width: 400px;
+    }
+    .colab-content1 .colab-title h1 {
+        font-size: 25px;
+    }
+    .colab-content1 .colab-title p {
+        font-size: 9px;
+    }
+}
+@media(max-width: 867px) {
+    .colab_content1 {
+        width: 200px;
+        height: 220px;
+    }
+    .colab-content1 .colab-image {
+        width: 200px;
+        height: 120px;
+        border-radius: 20px;
+    }
+    .colab-content1 .colab-image img {
+        width: 200px;
+        height: 120px;
+        border-radius: 20px;
+    }
+    .colab-content1 .colab-title {
+        width: 200px;
+    }
+    .colab-content1 .colab-title h1 {
+        font-size: 13px;
+    }
+    .colab-content1 .colab-title p {
+        font-size: 7px;
+    }
+}

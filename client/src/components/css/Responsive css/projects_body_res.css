@@ -1,0 +1,85 @@
+@media (max-width: 1210px) {
+    .projects-content-body  .projects-content-box2
+    .content-box1 .paragraph-box h1 {
+        font-size: 30px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box2 .content-paragraph p {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box3 {
+        margin-top: 10px;
+    } 
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a{
+        font-size: 10px;
+    }   
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a svg{
+        width: 10px;
+    }
+}
+@media (max-width: 910px) {
+    .projects-content-body  .projects-content-box2
+    .content-box1 .paragraph-box h1 {
+        font-size: 20px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box2 .content-paragraph p {
+        font-size: 7px;
+        line-height: 15px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box3 {
+        margin-top: 7px;
+    } 
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a{
+        font-size: 7.5px;
+        padding: 5px 15px;
+    }   
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a svg{
+        width: 7.5px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box1 .paragraph-box p {
+        font-size: 9px;
+    }
+}
+@media (max-width: 690px) {
+    .projects-content-body  .projects-content-box2
+    .content-box1 .paragraph-box h1 {
+        font-size: 15px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box1 .paragraph-box p {
+        font-size: 7px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box2 .content-paragraph p {
+        font-size: 5px;
+        line-height: 10px;
+    }
+    .projects-content-body  .projects-content-box2
+    .content-box3 {
+        margin-top: 5px;
+    } 
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a{
+        font-size: 6px;
+        padding: 5px 10px;
+    }   
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a svg{
+        width: 6px;
+    }
+}
+@media(max-width: 800px) {
+    .projects-content-body  .projects-content-box2
+    .content-box3 .view-button a svg{
+        width: 2px;
+    }
+}

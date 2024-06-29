@@ -1,0 +1,24 @@
+@media(max-width: 810px) {
+    .col-1 .item2 h2 {
+        font-size: 15px;
+    }
+    .col-1 .item3 box h1 {
+        font-size: 25px;
+    }
+    .item4 a svg {
+        width: 20px;
+    }
+    .body .col-2 img {
+        height: 220px;
+    }
+    .body .col-1 .item3 box h1 {
+        font-size: 28px;
+    }
+    .body .col-1 .item3 box p {
+        font-size: 10px;
+    }
+    .body .col-1 {
+        height: 60%;
+        justify-content: center;
+    }
+ }

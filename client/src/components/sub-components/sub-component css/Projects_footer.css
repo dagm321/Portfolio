@@ -1,4 +1,4 @@
-* {
+x* {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
@@ -61,4 +61,35 @@
     background-color: #ff5e00;
     transition: 0.3s ease;
     border-radius: 10px;
+}
+@media(max-width: 867px) {
+    .Projects-footer-body .projects-footer-box2
+    .projects-icon {
+        width: 60%;
+    }
+    .Projects-footer-body .projects-footer-box2
+    .projects-icon a svg {
+        width: 20px;
+    }
+    .Projects-footer-body .projects-footer-box1
+    .projects-button a{
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+    .Projects-footer-body .projects-footer-box1
+    .projects-button a svg{
+        width: 7px;
+    }
+    .projects-footer-box2 p {
+        font-size: 12px;
+    }
+}
+@media(max-width: 700px) {
+    .Projects-footer-body .projects-footer-box2
+    .projects-icon a svg {
+        width: 15px;
+    }
+    .projects-footer-box2 p {
+        font-size: 10px;
+    }
 }

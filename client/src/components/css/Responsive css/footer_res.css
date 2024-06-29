@@ -1,0 +1,10 @@
+@media(max-width: 730px) {
+    .footer {
+        flex-wrap: nowrap;
+    }.contents p {
+        font-size: 10px;
+    }
+    .contents p svg{
+        width: 7px;
+    }
+ }

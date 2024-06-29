@@ -1,5 +1,6 @@
 import React from "react";
 import './sub-component css/Projects_content.css';
+import '../css/Responsive css/projects_body_res.css';
 import Projects_line from "./Projects_line";
 
 function Projects_content({project_title, project_image, project_bio, project_paragraph, project_link, flex_direction}) {

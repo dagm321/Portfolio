@@ -10,3 +10,15 @@
     height: 8px;
     background-color: #C34600;
 }
+@media(max-width: 900px) {
+    .projects-line .projects_line {
+        width: 40%;
+        height: 5px;
+    }
+}
+@media(max-width: 700px) {
+    .projects-line .projects_line {
+        width: 40%;
+        height: 2px;
+    }
+}

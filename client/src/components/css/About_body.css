@@ -101,3 +101,38 @@
 .about-button a svg {
     margin-left: 4px;
 }
+@media(max-width: 1010px) {
+    .about-body .about-content
+    .about-box1 .about-image img{
+        height: 220px;
+    }
+    .about-body .about-title h1 {
+        font-size: 25px;
+    }
+    .about-paragraph p{
+        font-size: 10px;
+    }
+    .about-line {
+        height: 60%;
+        width: 1px;
+    }
+    .about-button a{
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+    .about-button a svg {
+        width: 9px;
+    }
+}
+@media(max-width: 650px){
+    .about-paragraph p {
+        font-size: 7px;
+    }
+    .about-button a{
+        font-size: 8px;
+        padding: 7px 12px;
+    }
+    .about-button a svg {
+        width: 7px;
+    }
+}

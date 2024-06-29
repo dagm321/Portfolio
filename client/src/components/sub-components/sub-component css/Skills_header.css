@@ -54,3 +54,18 @@
     justify-content: center;
     align-items: center;
 }
+@media(max-width: 1000px) {
+    .skills_head .skills_box2 h1 {
+        font-size: 30px;
+    }
+}
+@media(max-width: 750px) {
+    .skills_head .skills_box2 h1{
+        font-size: 20px;
+    }
+    .skills_box2 h1::after {
+        border-top: 3px solid #C34600;
+        width: 50px;
+        /* animation: animation 7s linear infinite; */
+    }
+}

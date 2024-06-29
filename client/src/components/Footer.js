@@ -1,7 +1,7 @@
 import React from "react";
 import './css/Footer.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {useState, useEffect} from 'react';
+import './css/Responsive css/footer_res.css';
 import axios from 'axios';
 import DOMPurify from "dompurify";
 

@@ -27,14 +27,16 @@ function Projects_body() {
         <>
             <Projects_header/>
             {
-                projects.map((project) => {
+                projects.map((project, index) => {
                     return <Projects_content
                         project_title={project.title}
                         project_bio={project.bio}
                         project_paragraph={project.descripition}
                         project_link={project.github_link}
                         project_image={bufferToDataURL(project.image.data, project.image.contentType)}
-                        flex_direction={""}
+                        flex_direction={
+                            index % 2 === 0 ? ("row-reverse") : ("")
+                        }
                     />
                 })
             }

@@ -1,5 +1,6 @@
 import React from "react";
 import './sub-component css/Colab_works.css'
+import '../css/Responsive css/colab_works_res.css';
 function Colab_works({colab_title, colab_paragraph, colab_image}) {
     return(
         <>

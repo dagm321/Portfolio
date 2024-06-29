@@ -4,12 +4,13 @@
     font-family: sans-serif;
 }
 .colab-content1 {
-    width: 551px;
-    height: 500px;
+    width: auto;
+    height: auto;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 50px;
 }
 .colab-image {
     width: 500px;

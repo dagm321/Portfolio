@@ -1,0 +1,22 @@
+
+@media(max-width: 810px) {
+  .header .logo h2 {
+    font-size: 15px;
+   }
+   .menu {
+    width: 50%;
+   }
+   .menu a {
+     font-size: 10px;
+   }
+   .logo h2::after {
+    padding: 10px;
+    width: 15px;
+}
+
+}
+@media(max-width: 600px) {
+  .logo h2 {
+    font-size: 10px;
+  }
+}

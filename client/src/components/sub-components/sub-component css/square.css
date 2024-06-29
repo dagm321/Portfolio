@@ -13,3 +13,9 @@
     75% { transform: rotate(52deg); }
     100% { transform: rotate(90deg); }
 }
+@media(max-width: 770px) {
+    .square {
+        width: 30px;
+        height: 30px;
+    }
+}

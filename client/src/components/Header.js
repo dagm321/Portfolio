@@ -1,5 +1,6 @@
 import React from "react";
 import './css/Header.css';
+import './css/Responsive css/header_res.css';
 import { useNavigate } from "react-router-dom";
 
 function Header({props}) {

@@ -1,5 +1,6 @@
 import React from "react";
 import './sub-component css/Skills_item.css';
+import './../css/Responsive css/skill_item_res.css';
 export default function Skills_item ({ language_name, svg, rating }) {
     return(
         <>

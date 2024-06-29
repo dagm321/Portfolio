@@ -161,3 +161,73 @@
     justify-content: center;
     align-items: center;
 }
+@media(max-width: 1010px){
+    .contact-titlebox h1{
+        font-size: 20px;
+    }
+    .contact-svg .svg a svg {
+        width: 15px;
+    }
+    .contact-inputs form input {
+        height: 22px;
+    }
+    .contact-inputs form input::placeholder {
+        font-size: 8px;
+    }
+    .contact-inputs form .textarea_message {
+        width: 83%;
+        height: 7vh;
+    }
+    .contact-inputs form button {
+        font-size: 10px;
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+    .textarea_message::placeholder {
+        font-size: 9px;
+    }
+    .contact-title h2{
+        font-size: 20px;
+    }
+    .contact-line {
+        width: 1px;
+        height: 60%;
+    }
+}
+@media(max-width: 750px){
+    .contact-titlebox h1{
+        font-size: 15px;
+    }
+    .contact-svg .svg a svg {
+        width: 10px;
+    }
+    .contact-inputs form input {
+        height: 17px;
+    }
+    .contact-inputs form input::placeholder {
+        font-size: 6px;
+    }
+    .contact-inputs form .textarea_message {
+        width: 73%;
+        height: 3vh;
+    }
+    .contact-inputs form button {
+        font-size: 5px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+    .textarea_message::placeholder {
+        font-size: 5px;
+    }
+    .contact-title h2{
+        font-size: 15px;
+    }
+    .contact-main {
+        width: 75%;
+        height: 50%;
+    }
+    .contact-line {
+        width: 1px;
+        height: 50%;
+    }
+}

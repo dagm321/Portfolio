@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 .colab-box2 {
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: space-evenly;
@@ -46,4 +46,10 @@
     justify-content: flex-start;
     align-items: center;
     background-color: #070707;
+}
+@media(max-width: 867px) {
+    .colab-body .colab-box1
+    .colab-subbox2 h1{
+        font-size: 18px;
+    }
 }
