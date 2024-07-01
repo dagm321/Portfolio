@@ -1,8 +1,30 @@
 import React from "react";
 import { useState } from "react";
 import './css/Responsive css/menu.css';
+import { useNavigate } from "react-router-dom";
 
 export default function Menu({closepopup}) {
+    const navigate = useNavigate();
+    const gotohome = (e) => {
+        e.preventDefault();
+        navigate('/');
+    }
+    const gotoskills = (e) => {
+        e.preventDefault();
+        navigate('/skills');
+    }
+    const gotoprojects = (e) => {
+        e.preventDefault();
+        navigate('/projects');
+    }
+    const gotocontact = (e) => {
+        e.preventDefault();
+        navigate('/contact');
+    }
+    const gotoabout = (e) => {
+        e.preventDefault();
+        navigate('/about');
+    }
     return(
         <>
             <div className="menu-body">
@@ -17,11 +39,11 @@ export default function Menu({closepopup}) {
                     </div>
                     <div className="menu-box2">
                         <div className="menu-menu">
-                            <a href="/" >Home</a>
-                            <a href="/projects">Projects</a>
-                            <a href="/skills">Skills</a>
-                            <a href="/about">About</a>
-                            <a href="/contact">Contact</a>
+                            <a href="/" onClick={gotohome} >Home</a>
+                            <a href="/projects" onClick={gotoprojects}>Projects</a>
+                            <a href="/skills" onClick={gotoskills}>Skills</a>
+                            <a href="/about" onClick={gotoabout}>About</a>
+                            <a href="/contact" onClick={gotocontact}>Contact</a>
                         </div>
                     </div>
                     <div className="menu-box3">

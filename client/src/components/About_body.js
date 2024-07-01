@@ -44,7 +44,7 @@ function About_body() {
                             <p>
                             {
                                 description.map((text) => {
-                                    return <p>
+                                    return <p >
                                         {text.description}
                                     </p>
                                 })

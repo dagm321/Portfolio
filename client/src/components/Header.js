@@ -49,7 +49,6 @@ function Header({props}) {
     const closepop = () => {
         setMenu(null);
     }
-
     return(
         <>
             {menu}

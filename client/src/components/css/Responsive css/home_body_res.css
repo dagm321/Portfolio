@@ -24,6 +24,27 @@
  }
  @media(max-width: 500px) {
     .body .col-2 img {
-        height: 100px;
+        height: 170px;
+    }
+    .item1 {
+        position: absolute;
+        top: 25%;
+    }
+    .item2 {
+        position: absolute;
+        top: 25%;
+        left: 0;
+    }
+    .col-1 .item2 h2 {
+        font-size: 11px;
+    }
+    .col-1 .item3 {
+        position: absolute;
+        top: 35%;
+    }
+    .col-1 .item4 {
+        position: absolute;
+        bottom: 15%;
+        left: -10%;
     }
  }
