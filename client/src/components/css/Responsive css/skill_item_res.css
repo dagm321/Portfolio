@@ -28,3 +28,25 @@
         height: 8px;
     }
 }
+@media(max-width: 500px) {
+    .skills_item {
+        height: 30px;
+    }
+    .skills_item .skill_name p {
+        font-size: 8px;
+    }
+    .skills_item p svg {
+        width: 7px;
+    }
+    .rating .rate_box {
+        width: 8px;
+        height: 8px;
+    }
+    .rating {
+        width: 100%;
+    }
+    .skills_item {
+        width: 100%;
+        height: 30px;
+    }
+}

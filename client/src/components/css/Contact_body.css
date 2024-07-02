@@ -82,7 +82,12 @@
     height: 30px;
     margin-top: 10px;
     background-color: #070707;
+    border-radius: 50px;
     box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.4);
+}
+.contact-inputs form input:focus {
+    background-color: #000000;
+    border-radius: 4px;
 }
 .textarea_message {
     width: 90%;
@@ -92,9 +97,11 @@
     margin-top: 10px;
     background-color: #070707;
     box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.4); 
+    border-radius: 10px;
 }
 .textarea_message:focus {
     background-color: #000000;
+    border-radius: 4px;
 }
 .textarea_message[type="text"] {
     padding: 20px;

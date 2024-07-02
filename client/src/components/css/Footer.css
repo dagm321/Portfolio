@@ -32,18 +32,4 @@
 .contents p {
     display: flex; 
 }
-@media(max-width: 500px) {
-    .contents p {
-        font-size: 7px;
-        padding: 4px;
-    }
-    .contents p svg {
-        width: 8px;
-    }
-    .line {
-        height: 1vh;
-    }
-    .footer {
-        height: 14vh;
-    }
-}
+

@@ -53,3 +53,15 @@
         font-size: 18px;
     }
 }
+@media(max-width: 500px) {
+    .colab-box2 {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: scroll;
+        gap: 41px;
+    }
+}

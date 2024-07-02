@@ -4,9 +4,10 @@ import '../css/Responsive css/projects_body_res.css';
 import Projects_line from "./Projects_line";
 
 function Projects_content({project_title, project_image, project_bio, project_paragraph, project_link, flex_direction}) {
+    const isminwidth = window.innerWidth >= 500;
     return(
         <>
-            <div className="projects-content-body" style={{flexDirection: `${flex_direction}`}}>
+            <div className="projects-content-body" style={{flexDirection: isminwidth ? `${flex_direction}` : null}}>
                 
                 <div className="projects-content-box1">
                     <img src={project_image} alt="aio image" />

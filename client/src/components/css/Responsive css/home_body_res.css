@@ -24,7 +24,8 @@
  }
  @media(max-width: 500px) {
     .body .col-2 img {
-        height: 170px;
+        height: 250px;
+        
     }
     .item1 {
         position: absolute;
@@ -33,10 +34,10 @@
     .item2 {
         position: absolute;
         top: 25%;
-        left: 0;
+        left: -15%;
     }
     .col-1 .item2 h2 {
-        font-size: 11px;
+        font-size: 13px;
     }
     .col-1 .item3 {
         position: absolute;
@@ -44,7 +45,14 @@
     }
     .col-1 .item4 {
         position: absolute;
-        bottom: 15%;
-        left: -10%;
+        bottom: 10%;
+        left: -25%;
+    }
+    .col-1 .item4 a {
+        font-size: 8px;
+    }
+    .col-2 {
+        position: absolute;
+        right: 25%;
     }
  }

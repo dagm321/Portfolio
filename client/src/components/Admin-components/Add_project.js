@@ -58,7 +58,10 @@ export default function Add_project() {
                         <input onChange={(e) => {setTitle(e.target.value)}} type="text" placeholder="Title" required/>
                         <input onChange={(e) => {setBio(e.target.value)}} type="text" placeholder="Bio" required/>
                         <textarea onChange={(e) => {setDescription(e.target.value)}} className="textarea" type="text" style={{height: '70px', borderRadius: '10px', width: "95%", marginLeft: "5px", marginTop: "5px"}} placeholder="Description" required/>
-                        <input onChange={(e) => {setImage(e.target.files[0])}} type="file" placeholder="Upload Image" required/>
+                        <div className="image-input">
+                            <input id="image-input" hidden onChange={(e) => {setImage(e.target.files[0])}} type="file" placeholder="Upload Image" required/>
+                            <label htmlFor="image-input">Upload Image</label>
+                        </div>
                         <input onChange={(e) => {setGithub_link(e.target.value)}} type="text" placeholder="Github Link" required/>
                         <button>Submit</button>
                     </form>

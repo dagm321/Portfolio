@@ -55,7 +55,10 @@ export default function Add_colab() {
                     <form onSubmit={submit}>
                         <input onChange={(e) => {setTitle(e.target.value)}} type="text" placeholder="Title" required/>
                         <textarea onChange={(e) => {setDescription(e.target.value)}} className="textarea" type="text" style={{height: '70px', marginLeft: "5px", borderRadius: '10px', width: "95%", marginTop: "4px"}} placeholder="Description" required/>
-                        <input onChange={(e) => {setImage(e.target.files[0])}} type="file" placeholder="Upload Image" required/>
+                        <div className="image-input">
+                            <input hidden id="file-input" onChange={(e) => {setImage(e.target.files[0])}} type="file" placeholder="Upload Image" required/>
+                            <label htmlFor="file-input"> upload image</label>
+                        </div>
                         <button>Submit</button>
                     </form>
                 </div>
